@@ -1,4 +1,4 @@
-let menu = [
+let menuDelDia = [
     {
         nombre: 'Milanesa',
         precio: 200
@@ -21,8 +21,26 @@ let menu = [
     },
 ]
 
+let postres = ["Volcan de chocolate", "Helado de chocolate", "Brownie de chocolate"];
+
+
 console.log('Platos del dia...');
 
-for(let plato of menu) {
+for(let plato of menuDelDia) {
     console.log(`${plato.nombre} $${plato.precio}`);
+}
+
+
+console.log('********* POSTRES ***********');
+
+for (let postre of postres) {
+    console.log(`Postre: ${postre}`);
+}
+postres.splice(1,1,"Helado de vainilla"); 
+
+
+console.log('********* NUEVO POSTRE ***********');
+
+for (let postre of postres) {
+    console.log(`Postre: ${postre}`);
 }
