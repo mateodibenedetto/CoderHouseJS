@@ -15,6 +15,7 @@ console.log(`El ${detodo[2][2]} tiene ${detodo[0]} años`)
 
 /// **** METODOS **** ///
 console.log("***********METODOS***********")
+console.log(users)
 // PUSH
 users.push("Juanito");
 console.log("Push:", users);
@@ -33,7 +34,7 @@ console.log("Splice:", users);
 users.splice(1,1,"Jonny"); // splice(desde que indice va a borrar, cuantos elementos va a borrar, inserta nuevo valor)
 console.log("Splice:", users);
 // JOIN
-let newArr = users.join(' - ');
+let newArr = users.join('-');
 console.log("Join:", newArr);
 // CONCAT
 let edades = [19, 25, 30];
@@ -41,7 +42,7 @@ let nombres = ["Juan", "Jorge", "Jaime"];
 let concatenado = nombres.concat(edades);
 console.log("Concat:" ,concatenado);
 // SLICE
-let corte = users.slice(2, 4);
+let corte = users.slice(0, 1);
 console.log("Original:", users, "Slice:", corte);
 // INDEXOF
 console.log("El indice de Jose es: ", users.indexOf('Jose'), "El indice de Juan es: ", users.indexOf('Juan'))
@@ -53,7 +54,21 @@ console.log("indexOf + splice:", nueva_lista);
 /// **** METODOS AVANZADOS **** /////
 console.log("***********METODOS AVANZADOS***********")
 // Transforma cada numero multiplicado por dos
-let number  = [1,2,3].map(n => n * 2);
+
+let multiplicar = (n) => {
+    return n * 2
+}
+const multiplicar2 = n => n * 2;
+
+function doble(num) {
+    return num * 2
+}
+
+let nums = [1,2,3]
+
+let number = nums.map(num => num * 2);
+
+
 console.log("Numeros:", number);
 // Filtra la comida que no sea carnivora
 let fruits = ["Naranja", "Kiwi", "Carne", "Banana"].filter(n => n !== "Carne");
