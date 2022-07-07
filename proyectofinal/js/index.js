@@ -18,7 +18,7 @@ let menuDelDia = [
     {
         nombre: 'Lomito',
         precio: 300
-    },
+    }
 ]
 
 let postres = ["Volcan de chocolate", "Helado de chocolate", "Brownie de chocolate"];
