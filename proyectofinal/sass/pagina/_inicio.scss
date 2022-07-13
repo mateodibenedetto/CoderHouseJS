@@ -1,5 +1,16 @@
-.title {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 3rem;
+.nav {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .title {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .nav-items {
+        display: flex;
+        gap: 2rem;
+    }
 }

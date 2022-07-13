@@ -50,10 +50,21 @@ select {
   color: inherit;
 }
 
-.title {
+.nav {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .title {
   text-align: center;
-  margin-top: 2rem;
   font-size: 3rem;
+}
+
+.nav .nav-items {
+  display: flex;
+  gap: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
