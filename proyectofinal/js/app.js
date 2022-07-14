@@ -58,33 +58,33 @@ const productos = [
 ]
 
 
-const obtenerPesas = () => {
-    const pesas = productos.filter(producto => producto.category === "pesas");
-    console.log('Pesas');
-    pesas.forEach(producto => console.log(`- ${producto.title}`))
-}
+// const obtenerPesas = () => {
+//     const pesas = productos.filter(producto => producto.category === "pesas");
+//     console.log('Pesas');
+//     pesas.forEach(producto => console.log(`- ${producto.title}`))
+// }
 
-let res = prompt("Que tipo de producto desea llevar?");
+// let res = prompt("Que tipo de producto desea llevar?");
 
-if(res.toLocaleLowerCase().includes("pesas")) {
-    obtenerPesas();
-} else {
-    alert('No se encontro ningun producto');
-}
+// if(res.toLocaleLowerCase().includes("pesas")) {
+//     obtenerPesas();
+// } else {
+//     alert('No se encontro ningun producto');
+// }
 
 
-const filtradoPrecios = () => {
-    const precios = productos.filter(el => el.price < precio);
-    console.log('Precios disponibles')
-    precios.forEach(el => console.log(`${el.title} ${el.price}`)); 
-}
+// const filtradoPrecios = () => {
+//     const precios = productos.filter(el => el.price < precio);
+//     console.log('Precios disponibles')
+//     precios.forEach(el => console.log(`${el.title} ${el.price}`)); 
+// }
 
-let precio = parseInt(prompt("Cual es el monto maximo que está dispuesto a pagar?"));
+// let precio = parseInt(prompt("Cual es el monto maximo que está dispuesto a pagar?"));
 
-if (precio <= 0) {
-    alert('El numero no puede ser menor de cero o igual')
-} else if (precio >= 1) {
-    filtradoPrecios();
-} else {
-    alert('No se encontro ningun precio');
-}
+// if (precio <= 0) {
+//     alert('El numero no puede ser menor de cero o igual')
+// } else if (precio >= 1) {
+//     filtradoPrecios();
+// } else {
+//     alert('No se encontro ningun precio');
+// }
