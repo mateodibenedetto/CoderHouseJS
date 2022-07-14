@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -13,6 +15,12 @@ html {
   border: 0;
   box-sizing: border-box;
   vertical-align: baseline;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  min-height: 100%;
 }
 
 img, video, figure {
@@ -48,6 +56,11 @@ select {
   background-color: transparent;
   display: flex;
   color: inherit;
+}
+
+.home .container-home {
+  background-image: url("../../assets/imgs/header-img.jpg");
+  background-color: #000;
 }
 
 .nav {

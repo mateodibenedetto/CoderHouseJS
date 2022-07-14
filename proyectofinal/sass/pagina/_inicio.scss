@@ -1,16 +1,8 @@
-.nav {
-    margin: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    .title {
-        text-align: center;
-        font-size: 3rem;
-    }
+@use '../base/variables' as v;
 
-    .nav-items {
-        display: flex;
-        gap: 2rem;
+.home {
+    .container-home {
+        background-image: url('../../assets/imgs/header-img.jpg');
+        background-color: #000;
     }
 }
