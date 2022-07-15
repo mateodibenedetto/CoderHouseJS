@@ -88,3 +88,18 @@ const productos = [
 // } else {
 //     alert('No se encontro ningun precio');
 // }
+
+const d = document;
+
+let container = d.querySelector('.productos');
+
+productos.forEach(producto => {
+    let cards = d.createElement('div');
+    cards.className = 'producto';
+    cards.innerHTML = ` 
+        <img src="./assets/imgs/header-img.jpg" alt="">
+        <h5 class="nombre">${producto.title}</h5>
+        <p class="dercripcion"></p>
+    `
+    container.appendChild(cards);
+})

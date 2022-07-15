@@ -2,7 +2,42 @@
 
 .home {
     .container-home {
-        background-image: url('../../assets/imgs/header-img.jpg');
-        background-color: #000;
+        background-image: url('/proyectofinal/assets/imgs/header-img.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 80vh; 
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .img-home {
+            filter: brightness(.5);
+            position: absolute;
+            min-height: 695px;
+            
+            .img {
+                min-height: 695px;
+                max-height: 695px;
+                width: auto;
+                width: 100%;
+                object-fit: cover; 
+            }
+        }
+        
+        .title { 
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            
+            .h2 { 
+                font-size: 3rem;
+                color: #fff;
+            }
+        }
     }
 }

@@ -1,0 +1,25 @@
+@use '../base/variables' as v;
+
+.productos {
+    padding-top: 2rem;
+    margin: 1rem;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 1rem;
+
+    .producto {
+        padding: 1rem;
+        background-color: v.$main-color;
+
+        img {
+            width: auto;
+        }
+
+        .nombre {
+            text-align: center;
+            padding-top: 1rem;
+            color: #fff;
+        }
+    }
+}
