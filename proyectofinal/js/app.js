@@ -1,5 +1,4 @@
-const productos = [
-    {
+const productos = [{
         id: 1,
         title: "Barras paralelas",
         category: "articulos",
@@ -37,7 +36,7 @@ const productos = [
         category: "articulos",
         price: 20,
         img: "",
-        desc: "Cuerda para saltar como rocky" 
+        desc: "Cuerda para saltar como rocky"
     },
     {
         id: 6,
@@ -45,7 +44,7 @@ const productos = [
         category: "articulos",
         price: 50,
         img: "",
-        desc: "Colchoneta para hacer cardio" 
+        desc: "Colchoneta para hacer cardio"
     },
     {
         id: 7,
@@ -53,53 +52,40 @@ const productos = [
         category: "pesas",
         price: 60,
         img: "",
-        desc: "Mancuernas de hierro" 
+        desc: "Mancuernas de hierro"
     }
 ]
 
-
-// const obtenerPesas = () => {
-//     const pesas = productos.filter(producto => producto.category === "pesas");
-//     console.log('Pesas');
-//     pesas.forEach(producto => console.log(`- ${producto.title}`))
-// }
-
-// let res = prompt("Que tipo de producto desea llevar?");
-
-// if(res.toLocaleLowerCase().includes("pesas")) {
-//     obtenerPesas();
-// } else {
-//     alert('No se encontro ningun producto');
-// }
-
-
-// const filtradoPrecios = () => {
-//     const precios = productos.filter(el => el.price < precio);
-//     console.log('Precios disponibles')
-//     precios.forEach(el => console.log(`${el.title} ${el.price}`)); 
-// }
-
-// let precio = parseInt(prompt("Cual es el monto maximo que está dispuesto a pagar?"));
-
-// if (precio <= 0) {
-//     alert('El numero no puede ser menor de cero o igual')
-// } else if (precio >= 1) {
-//     filtradoPrecios();
-// } else {
-//     alert('No se encontro ningun precio');
-// }
 
 const d = document;
 
 let container = d.querySelector('.productos');
 
-productos.forEach(producto => {
-    let cards = d.createElement('div');
-    cards.className = 'producto';
-    cards.innerHTML = ` 
-        <img src="./assets/imgs/header-img.jpg" alt="">
-        <h5 class="nombre">${producto.title}</h5>
-        <p class="dercripcion"></p>
-    `
-    container.appendChild(cards);
-})
+function mostrarProductos() {
+    productos.forEach(producto => {
+        let cards = d.createElement('div');
+        cards.className = 'producto';
+        cards.innerHTML = ` 
+            <img src="./assets/imgs/header-img.jpg" alt="">
+            <h5 class="nombre">${producto.title}</h5>
+            <p class="dercripcion"></p>
+        `
+        container.appendChild(cards);
+    })
+}
+
+const catalogo = d.getElementById('catalogo'),
+    inicio = d.getElementById('inicio');
+
+
+catalogo.addEventListener('click', e => {
+    e.preventDefault();
+
+    mostrarProductos();
+});
+
+inicio.addEventListener('click', e => {
+    // e.preventDefault();
+
+    container.innerHTML = null;
+});
