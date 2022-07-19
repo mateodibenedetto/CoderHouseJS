@@ -14,17 +14,29 @@
         color: #000;
         cursor: pointer;
     }
+    .active {
+        .nav-items {
+            display: flex;
+            li {
+                a {
+                    color: #000;
+                }
+            }
+        }
+    }
     .menu {
+        display: none;
         .nav-items {
             display: flex;
             flex-direction: column;
             gap: 2rem;
             justify-content: center;
+            align-items: center;
             background-color: rgba(0, 0, 0, 0.836);
             top: 0;
-            left: 0;
+            right: 0;
             position: absolute;
-            width: 500px;
+            width: 80%;
             height: 100vh;
             transition: all .4s ease;
             li {
@@ -33,8 +45,30 @@
                     font-size: 2.5rem;
                     text-align: center;
                     margin-left: 1rem;
+                    outline: none;
+                    padding: 1rem 2rem;
+                    border-radius: .2rem;
+                    transition: all .3s ease;
+                    &:hover {
+                        background-color: #fff;
+                        color: #000;
+                    }
                 }
             }
         }
+    }
+    .hbtn {
+        z-index: 99;
+        position: absolute;
+        right: 0;
+        color: #fff;
+        .hamburger-inner,
+        .hamburger-inner::after,
+        .hamburger-inner::before {
+            background-color: #fff;
+        }
+        // @include m.tablet {
+        //     display: none;
+        // }
     }
 }
