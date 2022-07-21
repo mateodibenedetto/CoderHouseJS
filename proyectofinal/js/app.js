@@ -79,6 +79,7 @@ function mostrarProductos() {
     })
 }
 
+//// Mostrar Inicio ////
 function mostrarInicio() {
     contenedorProductos.innerHTML = "";
     contenedorInicio.innerHTML = "";
@@ -91,7 +92,19 @@ function mostrarInicio() {
 }
 
 
+//// Eventos /////
+d.addEventListener('click', e => {
+    if (e.target.matches('.catalogo')) {
+        mostrarProductos();
+    }
+});
 
-catalogo.addEventListener('click', mostrarProductos);
+
+d.addEventListener('click', e => {
+    if (e.target.matches('#inicio')) {
+        mostrarInicio();
+    }
+});
+
 
 inicio.addEventListener('click', mostrarInicio);
