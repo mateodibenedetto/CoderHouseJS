@@ -1,6 +1,7 @@
 @use 'variables' as v;
-
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -24,7 +25,9 @@ body {
     background-color: v.$green;
 }
 
-img, video, figure {
+img,
+video,
+figure {
     max-width: 100%;
     width: 100%;
     display: flex;
@@ -46,14 +49,20 @@ li {
     list-style-type: none;
 }
 
-form, button,
-input, textarea,
+form,
+button,
+input,
+textarea,
 select {
     font-family: inherit;
     font-size: inherit;
     -webkit-hyphens: auto;
-            hyphens: auto;
+    hyphens: auto;
     background-color: transparent;
     display: flex;
     color: inherit;
+}
+
+.none {
+    display: none;
 }

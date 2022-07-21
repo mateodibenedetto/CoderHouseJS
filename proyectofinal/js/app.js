@@ -56,12 +56,17 @@ const productos = [{
     }
 ]
 
+//// Variables ////
+const d = document,
+    contenedorInicio = d.querySelector('.home'),
+    contenedorProductos = d.querySelector('.productos'),
+    catalogo = d.getElementById('catalogo'),
+    inicio = d.getElementById('inicio');
 
-const d = document;
-
-let container = d.querySelector('.productos');
-
+//// Mostrar Productos ////
 function mostrarProductos() {
+    contenedorProductos.innerHTML = "";
+    contenedorInicio.innerHTML = "";
     productos.forEach(producto => {
         let cards = d.createElement('div');
         cards.className = 'producto';
@@ -70,22 +75,23 @@ function mostrarProductos() {
             <h5 class="nombre">${producto.title}</h5>
             <p class="dercripcion"></p>
         `
-        container.appendChild(cards);
+        contenedorProductos.appendChild(cards);
     })
 }
 
-const catalogo = d.getElementById('catalogo'),
-    inicio = d.getElementById('inicio');
+function mostrarInicio() {
+    contenedorProductos.innerHTML = "";
+    contenedorInicio.innerHTML = "";
+    contenedorInicio.innerHTML = `<div class="container-home">
+        <div class="title">
+            <h2 class="h2">GymTop</h2>
+        </div>
+    </div>
+    `;
+}
 
 
-catalogo.addEventListener('click', e => {
-    e.preventDefault();
 
-    mostrarProductos();
-});
+catalogo.addEventListener('click', mostrarProductos);
 
-inicio.addEventListener('click', e => {
-    // e.preventDefault();
-
-    container.innerHTML = null;
-});
+inicio.addEventListener('click', mostrarInicio);
